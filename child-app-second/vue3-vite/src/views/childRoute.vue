@@ -7,12 +7,7 @@
 </template>
 
 <script setup>
-console.log('child-route')
-const res = {
-  data: null
-}
-const data = res && res.data && res.data
-// console.log(16, data)
+console.log('child-route---')
 </script>
 
 <style scoped>

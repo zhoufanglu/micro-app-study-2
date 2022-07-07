@@ -42,7 +42,7 @@ const linkClick = (route) => {
   <router-link @click="linkClick(i)" :to="{path: '/', query: {id: i.id}}" v-for="i in helloWorlds" :key="i.id">{{i.name}}&#45;&#45;</router-link> |
 -->
 
-
+  <router-link to="/">HelloWorld</router-link> ---
   <router-link to="/childRoute">childRoute</router-link>
   <br>
   <img alt="Vue logo" :src="logoPath" />

@@ -21,8 +21,6 @@ export default defineConfig({
         name: "child-app-1",
         apply: "build",
         configResolved(config) {
-          console.log(24, config.base)
-          console.log(24, config.build.assetsDir)
           basePath = `${config.base}${config.build.assetsDir}/`;
         },
         writeBundle(options, bundle) {
@@ -71,7 +69,7 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 4001
   },
-  base: `${process.env.NODE_ENV === 'production' ? 'http://www.lufangzhou.top' : ''}/child-app-1/`,
+  base: `${process.env.NODE_ENV === 'production' ? 'http://www.lufangzhou.top:3307' : ''}/child-app-1/`,
   build: {
     sourcemap: true,
   }

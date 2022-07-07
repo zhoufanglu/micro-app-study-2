@@ -23,7 +23,7 @@
 import { ref } from 'vue'
 import config from '@/micro/config.js'
 
-console.log(19, config)
+// console.log(19, config)
 const loading = ref(false)
 /** ********************micro-app生命周期********************** */
 const handleCreated = () => {

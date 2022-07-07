@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <script setup>
-import { ref, getCurrentInstance } from 'vue'
+/*import { ref, getCurrentInstance } from 'vue'
 import {onBeforeRouteLeave} from 'vue-router'
 
 // getCurrentInstance().vnode.type.name = 'HelloWorld-1'
@@ -14,10 +14,10 @@ import {onBeforeRouteLeave} from 'vue-router'
 const count = ref(0)
 
 onBeforeRouteLeave ((to, from)=> {
-  /*console.log(to.name)
+  /!*console.log(to.name)
   console.log(from.name)
-  console.log('------')*/
-})
+  console.log('------')*!/
+})*/
 
 
 </script>

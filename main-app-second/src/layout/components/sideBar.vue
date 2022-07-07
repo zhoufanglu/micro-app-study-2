@@ -80,6 +80,7 @@ const openMenuIndexList = menuList.value.map(i => i.name)
 /** ********************获取选中项********************** */
 let activeIndex = ''
 const getActiveIndex = () => {
+  // console.log(83, route.fullPath)
   activeIndex = route.path
   // 遍历第二层菜单menu， 如果路由包含 path, activeIndex就是该path的
   menuList.value.forEach(menu => {
@@ -89,17 +90,17 @@ const getActiveIndex = () => {
       }
     })
   })
+  console.log(92, activeIndex)
 }
 getActiveIndex()
 /** ********************事件********************** */
 const menuItemClick = item => {
-  console.log(96, '已经渲染的子应用', getActiveApps())
   // 如果是主应用地址 就正常跳转
   if (item.appFrom === 'main') {
     router.push(item.path)
-    if (window.eventCenterForChildApp_1) {
+    /* if (window.eventCenterForChildApp_1) {
       window.eventCenterForChildApp_1.clearDataListener()
-    }
+    } */
   }
   // 如果是子应用
   else {
@@ -109,31 +110,27 @@ const menuItemClick = item => {
      *
      * getActiveApps: 用于获取正在运行的子应用
      */
+    console.log(96, '已经渲染的子应用', getActiveApps())
     // eslint-disable-next-line prefer-const
     let { appFrom: appName, path } = item
+    console.log(114, '应用名和地址', appName, path)
     // 子应用未加载
     if (!getActiveApps().includes(appName)) {
       // 这里默认是hash, 初始化path 这里拼接一下hash值
       const pushPath = `/${appName}/#${path}`
+      console.log('主应用控制跳转--------->')
       // 主应用跳转
       router.push(pushPath)
     }
     // 子应用已加载
     else {
       // 传递事件给子应用， 然后让子应用跳转
-      console.log(124, appName, path)
+      console.log('子应用控制跳转--------->')
       // 向子应用传递路由 让子路由进行跳转
       microApp.setData(appName, { path: item.path })
     }
-    /* if (item.appFrom === 'child-app-1') {
-      console.log(102, window)
-      router.push('child-app-1')
-      // 向子应用传递路由 让子路由进行跳转
-      microApp.setData('child-app-1', { path: item.path })
-    } else if (item.appFrom === 'bdcp') {
-      router.push('/bdcp')
-    } */
   }
+  console.log('------------------------------------------------------------------')
 }
 </script>
 

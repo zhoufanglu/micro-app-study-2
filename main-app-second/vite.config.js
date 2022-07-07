@@ -41,7 +41,7 @@ export default ({ mode }) => {
       port: 3000
     },
     build: {
-      sourcemap: true,
+      sourcemap: false,
       rollupOptions: {
         output: {
           // entryFileNames: env.VITE_OUTPUT_DIR
