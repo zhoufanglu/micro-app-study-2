@@ -1,23 +1,34 @@
 <template>
-  <div class="bdcp">
+  <div
+    v-loading="loading"
+    class="user-manage"
+  >
     <!--      baseroute="/child-app-1"-->
     <micro-app
-      name="bdcp"
-      url="http://localhost:5001/bdcp/"
+      name="userManage"
+      :url="url"
       inline
-      disableSandbox
+      @created="handleCreated"
       @mounted="handleMount"
-      @unmount="handleUnmount"
     ></micro-app>
   </div>
 </template>
 
 <script setup>
-const handleMount = () => {
-  console.log('子应用-bdcp渲染了')
+import { ref } from 'vue'
+import config from '@/micro/config.js'
+
+const url = `${config.userManage}/userManage/`
+
+const loading = ref(false)
+/** ********************micro-app生命周期********************** */
+const handleCreated = () => {
+  loading.value = true
 }
-const handleUnmount = () => {
-  console.log('子应用-bdcp卸载了')
+
+const handleMount = () => {
+  loading.value = false
+  console.log('子应用-child-app-1渲染了')
 }
 </script>
 
@@ -25,6 +36,6 @@ const handleUnmount = () => {
   scoped
   lang="scss"
 >
-.test {
+.user-manage {
 }
 </style>

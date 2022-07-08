@@ -1,5 +1,6 @@
 const config = {
-  'child-app-1': 'http://localhost:4001'
+  'child-app-1': 'http://localhost:4001',
+  userManage: 'http://localhost:4004'
 }
 // 线上环境地址
 console.log(5, process.env.NODE_ENV)

@@ -42,9 +42,12 @@ npm run dev
 
 ## 微应用注意点
 * 主应用使用`history`, 子应用使用`hash`路由。
-```结构
-└─ main-app
-    └─child-app-1
-    └─child-app-2
-    └─bdcp
-```
+* 主应用目前叫`main-app`
+* 子应用信息 
+
+| 子应用名称         | 技术栈       | 开发地址           | 生产地址 |
+|---------------|-----------|----------------|------|
+| child-app-1   | vue3+vite | localhost:4001 | -    |
+| bdcp          | vue3+vite | localhost:4002 | -    |
+| userManage    | vue2+webpack | localhost:4004 | -    |
+

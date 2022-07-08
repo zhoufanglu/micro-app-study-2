@@ -73,6 +73,16 @@ menuList.value = [
         appFrom: 'child-app-1'
       }
     ]
+  },
+  {
+    name: '子-userManage',
+    children: [
+      {
+        name: 'userManage-home',
+        path: '/login',
+        appFrom: 'userManage'
+      }
+    ]
   }
 ]
 const openMenuIndexList = menuList.value.map(i => i.name)

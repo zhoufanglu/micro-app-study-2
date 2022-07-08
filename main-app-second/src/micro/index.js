@@ -31,6 +31,20 @@ microApp.start({
             return code
           }
         }
+      ],
+      userManage: [
+        {
+          loader(code) {
+            if (process.env.NODE_ENV === 'development') {
+              // 这里 basename 需要和子应用vite.config.js中base的配置保持一致
+              // eslint-disable-next-line no-param-reassign
+              code = code.replace(/(from|import)(\s*['"])(\/userManage\/)/g, all => {
+                return all.replace('/userManage/', 'http://localhost:4004/userManage/')
+              })
+            }
+            return code
+          }
+        }
       ]
     }
   }
