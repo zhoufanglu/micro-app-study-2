@@ -9,8 +9,15 @@ const childRoute = () => import('../views/childRoute.vue')
 // 2. 定义路由配置
 const routes = [
   { path: "/", redirect: "/HelloWorld" },
-  { path: "/HelloWorld", name: "HelloWorld", component: HelloWorld },
-  { path: "/childRoute", name: "childRoute", component: childRoute },
+  {
+    path: "/HelloWorld", name: "HelloWorld", component: HelloWorld,
+    /*children: [
+      { path: "/HelloWorld/childRoute", name: "childRoute", component: childRoute },
+    ]*/
+  },
+  {
+    path: "/HelloWorld/childRoute", name: "childRoute", component: childRoute,
+  }
 ];
 
 // 3. 创建路由实例

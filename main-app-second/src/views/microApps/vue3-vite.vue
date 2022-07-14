@@ -9,7 +9,7 @@
     <!--url="http://localhost:4001/child-app-1/"-->
     <micro-app
       name="child-app-1"
-      :url="`${config['child-app-1']}/child-app-1/`"
+      :url="url"
       inline
       disableSandbox
       @created="handleCreated"
@@ -22,6 +22,8 @@
 <script setup>
 import { ref } from 'vue'
 import config from '@/micro/config.js'
+
+const url = `${config['child-app-1']}/child-app-1/`
 
 // console.log(19, config)
 const loading = ref(false)

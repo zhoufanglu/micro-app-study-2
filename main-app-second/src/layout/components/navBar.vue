@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-bar">nav-bar</div>
+  <div class="main-app-nav-bar">nav-bar</div>
 </template>
 
 <script setup></script>
@@ -8,7 +8,7 @@
   scoped
   lang="scss"
 >
-.nav-bar {
+.main-app-nav-bar {
   font-size: 16px;
   height: 60px;
   @include vertical-center;

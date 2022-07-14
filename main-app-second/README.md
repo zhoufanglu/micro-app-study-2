@@ -49,5 +49,5 @@ npm run dev
 |---------------|-----------|----------------|------|
 | child-app-1   | vue3+vite | localhost:4001 | -    |
 | bdcp          | vue3+vite | localhost:4002 | -    |
-| userManage    | vue2+webpack | localhost:4004 | -    |
+| userManage    | vue2+webpack | localhost:4003 | -    |
 

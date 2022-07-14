@@ -4,6 +4,7 @@ export default {
 }
 </script>
 <script setup>
+console.log('---hello-world')
 /*import { ref, getCurrentInstance } from 'vue'
 import {onBeforeRouteLeave} from 'vue-router'
 
@@ -25,6 +26,14 @@ onBeforeRouteLeave ((to, from)=> {
 <template>
   <div style="border: solid 1px red">
     <h2>HelloWorld</h2>
+    <el-tag>HelloWorld</el-tag>
+    <router-view></router-view>
+    <!--v-if="showPage" 去掉showPage， 放到App.vue试试-->
+<!--      <router-view v-slot="{ Component }">
+        <transition name="el-fade-in" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>-->
 <!--    <h2>tog</h2>
     <button @click="$router.push('/childRoute')">go 去子路由</button>
     <p>

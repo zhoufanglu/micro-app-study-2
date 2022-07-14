@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar">
+  <div class="main-app-side-bar">
     <!--    <br />
     <router-link to="/page-A">page-A</router-link>
     <br />
@@ -38,6 +38,7 @@ import { useRouter, useRoute } from 'vue-router'
 // 因为vite子应用关闭了沙箱，我们需要为子应用child-app-1 创建EventCenterForMicroApp对象来实现数据通信
 console.log(39, window)
 window.eventCenterForChildApp_1 = new EventCenterForMicroApp('child-app-1')
+window.eventCenterForChildApp_bdcp = new EventCenterForMicroApp('bdcp')
 
 const router = useRouter()
 const route = useRoute()
@@ -69,8 +70,18 @@ menuList.value = [
       },
       {
         name: 'childRoute',
-        path: '/childRoute',
+        path: '/HelloWorld/childRoute',
         appFrom: 'child-app-1'
+      }
+    ]
+  },
+  {
+    name: '子-bdcp',
+    children: [
+      {
+        name: 'bdcp-home',
+        path: '/',
+        appFrom: 'bdcp'
       }
     ]
   },
@@ -148,7 +159,7 @@ const menuItemClick = item => {
   scoped
   lang="scss"
 >
-.side-bar {
+.main-app-side-bar {
   width: 200px;
   height: 100%;
   //box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, .1);

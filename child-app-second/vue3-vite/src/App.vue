@@ -43,7 +43,7 @@ const linkClick = (route) => {
 -->
 
   <router-link to="/">HelloWorld</router-link> ---
-  <router-link to="/childRoute">childRoute</router-link>
+  <router-link to="/HelloWorld/childRoute">childRoute</router-link>
   <br>
   <img alt="Vue logo" :src="logoPath" />
 <!--  <img alt="Vue logo" src="src/assets/logo-child.png" />-->

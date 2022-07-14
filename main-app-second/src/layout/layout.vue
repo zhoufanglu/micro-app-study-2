@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="main-app-layout">
     <!--顶部导航-->
     <navBar></navBar>
     <div class="main">
@@ -30,7 +30,7 @@ import sideBar from './components/sideBar.vue'
   lang="scss"
   scoped
 >
-.layout {
+.main-app-layout {
   display: flex;
   flex-direction: column;
 
