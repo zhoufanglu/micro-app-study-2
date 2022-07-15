@@ -74,8 +74,8 @@ menuList.value = [
         appFrom: 'child-app-1'
       }
     ]
-  },
-  {
+  }
+  /*  {
     name: '子-bdcp',
     children: [
       {
@@ -94,7 +94,7 @@ menuList.value = [
         appFrom: 'userManage'
       }
     ]
-  }
+  } */
 ]
 const openMenuIndexList = menuList.value.map(i => i.name)
 

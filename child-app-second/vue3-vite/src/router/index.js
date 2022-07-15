@@ -11,13 +11,13 @@ const routes = [
   { path: "/", redirect: "/HelloWorld" },
   {
     path: "/HelloWorld", name: "HelloWorld", component: HelloWorld,
-    /*children: [
+    children: [
       { path: "/HelloWorld/childRoute", name: "childRoute", component: childRoute },
-    ]*/
+    ]
   },
-  {
+  /*{
     path: "/HelloWorld/childRoute", name: "childRoute", component: childRoute,
-  }
+  }*/
 ];
 
 // 3. 创建路由实例
