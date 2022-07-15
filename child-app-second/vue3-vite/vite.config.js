@@ -73,7 +73,8 @@ export default ({ mode }) => {
       host: '0.0.0.0',
       port: 4001
     },
-    base: `${process.env.NODE_ENV === 'production' ? 'http://192.168.129.206' : ''}/child-app-1/`,
+    // base: `${process.env.NODE_ENV === 'production' ? 'http://192.168.129.206' : ''}/child-app-1/`,
+    base: `${process.env.NODE_ENV === 'production' ? 'http://110.40.136.102:3307' : ''}/child-app-1/`,
     build: {
       sourcemap: true,
     }
