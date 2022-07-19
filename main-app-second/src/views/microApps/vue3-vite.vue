@@ -15,12 +15,14 @@
       @created="handleCreated"
       @mounted="handleMount"
       @unmount="handleUnmount"
+      @error="handleError"
     ></micro-app>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { ElMessage } from 'element-plus'
 import config from '@/micro/config.js'
 
 const url = `${config['child-app-1']}/child-app-1/`
@@ -38,6 +40,11 @@ const handleMount = () => {
 }
 const handleUnmount = () => {
   console.log('子应用-child-app-1卸载了')
+}
+const handleError = () => {
+  console.log('error')
+  loading.value = false
+  ElMessage.error('加载出错')
 }
 </script>
 
