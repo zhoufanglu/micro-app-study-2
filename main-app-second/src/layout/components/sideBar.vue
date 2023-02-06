@@ -134,7 +134,7 @@ const menuItemClick = item => {
     console.log(96, '已经渲染的子应用', getActiveApps())
     // eslint-disable-next-line prefer-const
     let { appFrom: appName, path } = item
-    console.log(114, '应用名和地址', appName, path)
+    console.log(114, '应用名和地址', `[${appName}]----${path}`)
     // 子应用未加载
     if (!getActiveApps().includes(appName)) {
       // 这里默认是hash, 初始化path 这里拼接一下hash值
@@ -149,6 +149,7 @@ const menuItemClick = item => {
       console.log('子应用控制跳转--------->')
       // 向子应用传递路由 让子路由进行跳转
       microApp.setData(appName, { path: item.path })
+      console.log(152, window)
     }
   }
   console.log('------------------------------------------------------------------')

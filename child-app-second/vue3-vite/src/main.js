@@ -5,7 +5,6 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 // 监听基座下发的数据变化
-// console.log(6, window)
 if(window.eventCenterForChildApp_1){
   window.eventCenterForChildApp_1.addDataListener((data) => {
     // 当基座下发跳转指令时进行跳转

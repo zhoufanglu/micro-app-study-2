@@ -9,6 +9,7 @@
     <!--url="http://localhost:4001/child-app-1/"-->
     <micro-app
       name="child-app-1"
+      class="child-app-1"
       :url="url"
       inline
       disableSandbox
@@ -52,6 +53,9 @@ const handleError = () => {
   scoped
   lang="scss"
 >
+.child-app-1 {
+  border: solid 1px red;
+}
 .vue3-vite {
   min-height: 500px;
 }

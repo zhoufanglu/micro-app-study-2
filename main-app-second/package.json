@@ -14,7 +14,7 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@micro-zoe/micro-app": "^0.8.6",
+    "@micro-zoe/micro-app": "^1.0.0-alpha.10",
     "@vitejs/plugin-vue": "^2.3.1",
     "axios": "^0.26.1",
     "element-plus": "^2.2.6",

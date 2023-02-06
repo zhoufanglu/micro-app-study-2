@@ -1,6 +1,8 @@
 import microApp from '@micro-zoe/micro-app'
 // 微前端-microApp-注入
 microApp.start({
+  'disable-memory-router': true, // 关闭虚拟路由系统
+  'disable-patch-request': true, // 关闭对子应用请求的拦截
   plugins: {
     modules: {
       // appName即应用的name值
